@@ -3,9 +3,9 @@ import { users } from "../data/data";
 const Exercise1 = () => {
   const listUsers = users.map((user) => {
     if (user.age > 18) {
-      return <li>{user.name}（成人）</li>;
+      return <li key={user.id}>{user.name}（成人）</li>;
     } else {
-      return <li>{user.name}</li>;
+      return <li key={user.id}>{user.name}</li>;
     }
   });
 
