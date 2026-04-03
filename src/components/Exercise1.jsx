@@ -1,12 +1,15 @@
 import { users } from "../data/data";
 
 const Exercise1 = () => {
-  const listUsers = users.map((user) => {
-    const adult = user.age >= 18 ? "（成人）" : "";
-    return <li key={user.id}>{user.name + adult}</li>;
-  });
-
-  return <ul>{listUsers}</ul>;
+  return (
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>
+          {user.age >= 18 ? user.name + "（成人）" : user.name}
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default Exercise1;
