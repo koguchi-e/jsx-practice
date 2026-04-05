@@ -5,7 +5,8 @@ const Exercise1 = () => {
     <ul>
       {users.map((user) => (
         <li key={user.id}>
-          {user.age >= 18 ? user.name + "（成人）" : user.name}
+          {user.name}
+          {user.age >= 18 && "（成人）"}
         </li>
       ))}
     </ul>
